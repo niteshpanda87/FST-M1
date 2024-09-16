@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSuiteResults>
+  <testCase>
+    <timeTaken>1686</timeTaken>
+    <startTime>01:05:29</startTime>
+    <testCaseName>Activity1 Test Case</testCaseName>
+    <status>PASS</status>
+    <testCaseId>1c9927d7-cf37-430d-9ca3-79b8fc4d21aa</testCaseId>
+    <testStepParameters>
+      <parameters>
+        <iconPath>/rest_request_step.svg</iconPath>
+        <testStepName>Post</testStepName>
+      </parameters>
+      <parameters>
+        <iconPath>/rest_request_step.svg</iconPath>
+        <testStepName>Login</testStepName>
+      </parameters>
+      <parameters>
+        <iconPath>/rest_request_step.svg</iconPath>
+        <testStepName>Get</testStepName>
+      </parameters>
+      <parameters>
+        <iconPath>/rest_request_step.svg</iconPath>
+        <testStepName>Logout</testStepName>
+      </parameters>
+      <parameters>
+        <iconPath>/rest_request_step.svg</iconPath>
+        <testStepName>Delete</testStepName>
+      </parameters>
+    </testStepParameters>
+    <failedTestSteps/>
+    <testStepResults>
+      <result>
+        <timeTaken>784</timeTaken>
+        <name>Post</name>
+        <started>01:05:29.994</started>
+        <message>Step 1 [Post] PASS: took 784 ms</message>
+        <order>2</order>
+        <status>PASS</status>
+      </result>
+      <result>
+        <timeTaken>215</timeTaken>
+        <name>Login</name>
+        <started>01:05:30.809</started>
+        <message>Step 2 [Login] PASS: took 215 ms</message>
+        <order>3</order>
+        <status>PASS</status>
+      </result>
+      <result>
+        <timeTaken>245</timeTaken>
+        <name>Get</name>
+        <started>01:05:31.045</started>
+        <message>Step 3 [Get] PASS: took 245 ms</message>
+        <order>4</order>
+        <status>PASS</status>
+      </result>
+      <result>
+        <timeTaken>215</timeTaken>
+        <name>Logout</name>
+        <started>01:05:31.320</started>
+        <message>Step 4 [Logout] PASS: took 215 ms</message>
+        <order>5</order>
+        <status>PASS</status>
+      </result>
+      <result>
+        <timeTaken>227</timeTaken>
+        <name>Delete</name>
+        <started>01:05:31.575</started>
+        <message>Step 5 [Delete] PASS: took 227 ms</message>
+        <order>6</order>
+        <status>PASS</status>
+      </result>
+    </testStepResults>
+  </testCase>
+</testSuiteResults>
