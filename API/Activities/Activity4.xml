@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSuiteResults>
+  <testCase>
+    <timeTaken>83</timeTaken>
+    <startTime>18:01:27</startTime>
+    <testCaseName>http://ipwhois.app Test Case 1</testCaseName>
+    <status>PASS</status>
+    <testCaseId>6f1c5632-b1fd-44bc-b867-239acb24432c</testCaseId>
+    <testStepParameters>
+      <parameters>
+        <iconPath>/datasource_step.svg</iconPath>
+        <testStepName>Data Source</testStepName>
+      </parameters>
+      <parameters>
+        <iconPath>/rest_request_step.svg</iconPath>
+        <testStepName>Request 1</testStepName>
+      </parameters>
+      <parameters>
+        <iconPath>/datasource_loop_step.svg</iconPath>
+        <testStepName>Data Source Loop</testStepName>
+      </parameters>
+      <parameters>
+        <iconPath>/rest_request_step.svg</iconPath>
+        <testStepName>Request 1</testStepName>
+      </parameters>
+      <parameters>
+        <iconPath>/datasource_loop_step.svg</iconPath>
+        <testStepName>Data Source Loop</testStepName>
+      </parameters>
+      <parameters>
+        <iconPath>/rest_request_step.svg</iconPath>
+        <testStepName>Request 1</testStepName>
+      </parameters>
+      <parameters>
+        <iconPath>/datasource_loop_step.svg</iconPath>
+        <testStepName>Data Source Loop</testStepName>
+      </parameters>
+    </testStepParameters>
+    <failedTestSteps/>
+    <testStepResults>
+      <result>
+        <timeTaken>1</timeTaken>
+        <name>Data Source</name>
+        <started>18:01:27.667</started>
+        <message>Step 1 [Data Source] PASS: took 1 ms</message>
+        <order>2</order>
+        <status>PASS</status>
+      </result>
+      <result>
+        <timeTaken>36</timeTaken>
+        <name>Request 1</name>
+        <started>18:01:27.673</started>
+        <message>Step 2 [Request 1] PASS: took 36 ms</message>
+        <order>3</order>
+        <status>PASS</status>
+      </result>
+      <result>
+        <timeTaken>0</timeTaken>
+        <name>Data Source Loop</name>
+        <started>18:01:27.725</started>
+        <message>Step 3 [Data Source Loop] PASS: took 0 ms
+ -> Data Row 1</message>
+        <order>4</order>
+        <status>PASS</status>
+      </result>
+      <result>
+        <timeTaken>19</timeTaken>
+        <name>Request 1</name>
+        <started>18:01:27.727</started>
+        <message>Step 4 [Request 1] PASS: took 19 ms</message>
+        <order>5</order>
+        <status>PASS</status>
+      </result>
+      <result>
+        <timeTaken>0</timeTaken>
+        <name>Data Source Loop</name>
+        <started>18:01:27.757</started>
+        <message>Step 5 [Data Source Loop] PASS: took 0 ms
+ -> Data Row 2</message>
+        <order>6</order>
+        <status>PASS</status>
+      </result>
+      <result>
+        <timeTaken>27</timeTaken>
+        <name>Request 1</name>
+        <started>18:01:27.759</started>
+        <message>Step 6 [Request 1] PASS: took 27 ms</message>
+        <order>7</order>
+        <status>PASS</status>
+      </result>
+      <result>
+        <timeTaken>0</timeTaken>
+        <name>Data Source Loop</name>
+        <started>18:01:27.798</started>
+        <message>Step 7 [Data Source Loop] PASS: took 0 ms
+ -> Data Row 3</message>
+        <order>8</order>
+        <status>PASS</status>
+      </result>
+    </testStepResults>
+  </testCase>
+</testSuiteResults>
