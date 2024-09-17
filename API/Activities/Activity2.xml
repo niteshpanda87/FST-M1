@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testSuiteResults>
+  <testCase>
+    <timeTaken>687</timeTaken>
+    <startTime>10:59:08</startTime>
+    <testCaseName>Activity2 Test Case 1</testCaseName>
+    <status>PASS</status>
+    <testCaseId>6401c6d6-ea77-4252-89f3-74f264d03dd0</testCaseId>
+    <testStepParameters>
+      <parameters>
+        <iconPath>/rest_request_step.svg</iconPath>
+        <testStepName>Get</testStepName>
+      </parameters>
+    </testStepParameters>
+    <failedTestSteps/>
+    <testStepResults>
+      <result>
+        <timeTaken>687</timeTaken>
+        <name>Get</name>
+        <started>10:59:08.505</started>
+        <message>Step 1 [Get] PASS: took 687 ms</message>
+        <order>2</order>
+        <status>PASS</status>
+      </result>
+    </testStepResults>
+  </testCase>
+</testSuiteResults>
