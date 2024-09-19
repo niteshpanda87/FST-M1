@@ -35,12 +35,42 @@ public class LoginSteps {
         driver.get("https://v1.training-support.net/selenium/login-form");
     }
     
-    @When("^User enters username and password$")
+//    @When("^User enters username and password$")
+//    public void enterCredentials() {
+//        //Enter username
+//        driver.findElement(By.id("username")).sendKeys("admin");
+//        //Enter password
+//        driver.findElement(By.id("password")).sendKeys("password");
+//        //Click Login
+//        driver.findElement(By.xpath("//button[@type='submit']")).click();
+//    }
+    
+//    @When("User enters {string} and {string}")
+//    public void user_enters_and(String username, String password) throws Throwable {
+//        //Enter username from Feature file
+//        driver.findElement(By.id("username")).sendKeys(username);
+//        //Enter password from Feature file
+//        driver.findElement(By.id("password")).sendKeys(password);
+//        //Click Login
+//        driver.findElement(By.xpath("//button[@type='submit']")).click();
+//    }
+    
+    @When("User enters username and password")
     public void enterCredentials() {
         //Enter username
         driver.findElement(By.id("username")).sendKeys("admin");
         //Enter password
         driver.findElement(By.id("password")).sendKeys("password");
+        //Click Login
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+    }
+ 
+    @When("User enters {string} and {string}")
+    public void user_enters_and(String username, String password) throws Throwable {
+        //Enter username from Feature file
+        driver.findElement(By.id("username")).sendKeys(username);
+        //Enter password from Feature file
+        driver.findElement(By.id("password")).sendKeys(password);
         //Click Login
         driver.findElement(By.xpath("//button[@type='submit']")).click();
     }
