@@ -1,46 +1,55 @@
-package Project;
+package Activity;
+
 
 import org.testng.annotations.Test;
-
+import org.testng.Assert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 public class Activity1 {
-	//Declare a Global Driver
-	WebDriver driver;
-	
+    // Declare the WebDriver object
+    WebDriver driver;
+    
+    @BeforeClass
+    public void beforeMethod() {
+        // Set up the Firefox driver
+        WebDriverManager.firefoxdriver().setup();
+        //Create a new instance of the Firefox driver
+        driver = new FirefoxDriver();
+        
+        //Open browser
+        driver.get("https://v1.training-support.net");
+    }
 
-  @BeforeClass
-  public void setUp() {
-	  // Setup Geko driver
-	  WebDriverManager.firefoxdriver().setup();
-	  
-	  // Initialize the Driver
-	  driver = new FirefoxDriver();
-	  
-	  // Open the Browser
-	  driver.get("https://alchemy.hguy.co/lms");
-	  
-  }
-  
-  @Test
-  public void homePage() {
-	  // get the title of the page
-	  String pageName = driver.getTitle();
-	  
-	  // Validate the Page title
-	  Assert.assertEquals("Alchemy LMS – An LMS Application", pageName);
-  }
+    @Test
+    public void exampleTestCase() {
+        // Check the title of the page
+        String title = driver.getTitle();
+            
+        //Print the title of the page
+        System.out.println("Page title is: " + title);
+            
+            //Assertion for page title
+        Assert.assertEquals("Training Support", title);
+                    
+        //Find the clickable link on the page and click it
+        driver.findElement(By.id("about-link")).click();
+                    
+        //Print title of new page
+        System.out.println("New page title is: " + driver.getTitle());
+        
+        Assert.assertEquals(driver.getTitle(), "About Training Support");
+    }
 
-  @AfterClass
-  public void tearDown() {
-	  // Close the browser
-	  driver.quit();
-  }
+    @AfterClass
+    public void afterMethod() {
+        //Close the browser
+        driver.quit();
+    }
 
 }

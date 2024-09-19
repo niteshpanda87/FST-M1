@@ -1,49 +1,64 @@
-package Project;
+package Activity;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.SkipException;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-import org.testng.annotations.BeforeClass;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-
 public class Activity2 {
-	// Declare Global driver
-	WebDriver driver;
-	
-  @BeforeClass
-  public void setUp() {
-	  // Setup Geko driver
-	  WebDriverManager.firefoxdriver().setup();
-	  
-	  // Initialize the Browser
-	  driver = new FirefoxDriver();	 
-	  
-	  // Open the Browser
-	  driver.get("https://alchemy.hguy.co/lms");
-  }
-  
-  @Test
-  public void pageHeading() {
-	  // Get the Page heading Name
-	  String pageHeading = driver.findElement(By.className("uagb-ifb-title")).getText();
-	  
-	  // Print the page name
-	  System.out.println("Page Name is: " +pageHeading);
-	  
-	  // Assertion for Page Heading
-	  Assert.assertEquals("Learn from Industry Experts", pageHeading);
-  }
+    WebDriver driver;
+    
+    @BeforeTest
+    public void beforeMethod() {
+        // Set up the Firefox driver
+        WebDriverManager.firefoxdriver().setup();
+        //Create a new instance of the Firefox driver
+        driver = new FirefoxDriver();
+            
+        //Open the browser
+        driver.get("https://v1.training-support.net/selenium/target-practice");
+    }
+    
+    @Test
+    public void testCase1() {
+        //This test case will pass
+        String title = driver.getTitle();
+        System.out.println("Title is: " + title);
+        Assert.assertEquals(title, "Target Practice");
+    }
+    
+    @Test
+    public void testCase2() {
+        //This test case will Fail
+        WebElement blackButton = driver.findElement(By.cssSelector("button.black"));
+        Assert.assertTrue(blackButton.isDisplayed());
+        Assert.assertEquals(blackButton.getText(), "Black");
+    }
+    
+    @Test(enabled = false)
+    public void testCase3() {
+        //This test will be skipped and not counted
+        String subHeading = driver.findElement(By.className("sub")).getText();
+        Assert.assertTrue(subHeading.contains("Practice"));
+    }
+    
+    @Test
+    public void testCase4() {
+        //This test will be skipped and will be be shown as skipped
+        throw new SkipException("Skipping test case");      
+    }
 
-  @AfterClass
-  public void tearDown() {
-	  
-	  // Close the Browser
-	  driver.quit();
-  }
+    @AfterTest
+    public void afterMethod() {
+        //Close the browser
+        driver.close();
+    }
 
 }
